@@ -1,8 +1,8 @@
-# 평범한 배낭
+# Nolaml Knapsack - baekjoon
 
-[12865](https://www.acmicpc.net/problem/12865)
+[12865 평범한 배낭](https://www.acmicpc.net/problem/12865)
 
-Dynamic Programming, 동적 계획법
+Dynamic Programming
 
 | 제출 번호 | 아이디 | 문제  | 결과         | 메모리 | 시간 | 언어           | 코드 길이 | 제출한 시간 |
 | --------- | ------ | ----- | ------------ | ------ | ---- | -------------- | --------- | ----------- |
