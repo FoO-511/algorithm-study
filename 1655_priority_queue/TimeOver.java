@@ -92,30 +92,15 @@ public class TimeOver {
 
 		if (current.value > Q.value) {
 			insertSmallerQueue(current, Q);
-			center.index += 1;
 			if (i % 2 == 0) {
-				if (center.Q.value > center.Q.prev.value) {
-					center.Q = center.Q.prev;
-					center.index -= 1;
-				}
-			} else {
-				if (i / 2 + 1 < center.index) {
-					center.Q = center.Q.prev;
-					center.index -= 1;
-				}
+				center.Q = center.Q.prev;
+				center.index -= 1;
 			}
 		} else {
 			insertBiggerQueue(current, Q);
-			if (i % 2 == 0) {
-				if (center.Q.value > center.Q.next.value) {
-					center.Q = center.Q.next;
-					center.index += 1;
-				}
-			} else {
-				if (i / 2 + 1 > center.index) {
-					center.Q = center.Q.next;
-					center.index += 1;
-				}
+			if (i % 2 != 0) {
+				center.Q = center.Q.next;
+				center.index += 1;
 			}
 		}
 	}
@@ -128,7 +113,6 @@ public class TimeOver {
 		Pointer center = new Pointer(current);
 
 		try {
-
 			bw.write(center.Q.value + "\n");
 			for (int i = 2; i < q + 2; i++) {
 				insertNewQueue(current, center, i);
@@ -138,9 +122,6 @@ public class TimeOver {
 
 			bw.close();
 			br.close();
-		} catch (IOException e) {
-
-		}
-
+		} catch (IOException e) {}
 	}
 }
