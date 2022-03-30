@@ -32,7 +32,7 @@ class GraphNode {
 }
 
 class AdjList {
-	private GraphNode head[] = new GraphNode[10];
+	protected GraphNode head[] = new GraphNode[10];
 	private int totalV = 0;
 
 	public void insertVertex(int v) {
@@ -48,6 +48,8 @@ class AdjList {
 			gNode.vertex = v2;
 			gNode.link = head[v1];
 			head[v1] = gNode;
+			// 기존 head 배열에 있던 노드를 새 노드에 링크하고
+			// 새 노드를 head 배열에 넣음.
 		}
 	}
 
