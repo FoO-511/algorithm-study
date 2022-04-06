@@ -1,6 +1,6 @@
 # CCW - baekjoon
 
-[11758 평범한 배낭](https://www.acmicpc.net/problem/11758)
+[11758 CCW](https://www.acmicpc.net/problem/11758)
 
 CCW
 
