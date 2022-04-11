@@ -57,7 +57,7 @@ let tmp_edges = [];
 let ans = 0;
 
 // 4. 모든 노드가 포함될 때까지 2, 3 반복.
-while (MST_nodes.size < n && ans < 4) {
+while (MST_nodes.size < n) {
   // 2. T에 포함된 노드와 T에 포함되지 않은 노드들의 간선 중 가중치가 가장 작은 간선을 찾음.
   // T에 포함된 노드의 간선들을 가중치가 작은 순으로 정렬
   tmp_edges = [];
@@ -77,6 +77,7 @@ while (MST_nodes.size < n && ans < 4) {
   }
 
   const shortest_edge = tmp_edges[0];
+  if (!shortest_edge) continue;
 
   // 3. 그 간선에 연결된 T에 포함되지 않은 노드를 T에 포함.
   ans += shortest_edge.weight;
