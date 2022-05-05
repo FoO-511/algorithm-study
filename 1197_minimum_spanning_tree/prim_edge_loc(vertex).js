@@ -23,7 +23,7 @@ class PQ {
     this.heap[loc] = edge;
   }
   top() {
-    return this.heap[this.size];
+    return this.heap[1];
   }
   pop() {
     const top = this.heap[1];
@@ -31,8 +31,10 @@ class PQ {
     let child = 2;
     let temp = this.heap[this.size--]; // 제일 끝값(최하위노드)
 
-    while (this.size > child) {
+    // child가 현재 힙 크기와 같거나 작을 동안
+    while (this.size >= child) {
       // 자식 노드 중 더 우선순위 높은 값 선택
+      // 형제 노드가 선택될 가능성이 있어서 child <= this.size 가 아닌 <를 사용
       if (
         child < this.size &&
         this.compare(this.heap[child + 1], this.heap[child])
@@ -77,16 +79,13 @@ for (let i = 1; i <= nodeN; i++) {
   while (!dist.empty()) {
     now = dist.top()[0]; // 가중치가 제일 작은 간선과 연결된 노드
     if (!selected[now]) {
-      console.log(dist.heap);
       min_dist = dist.top()[1];
       break;
       //   간선에 없는 노드이면 min_dist 갱신
       // 간선에 있는 노드일 경우 dist안에 있는 다른 간선을 탐색
     }
     dist.pop();
-    console.log("pop", dist.heap);
   }
-  console.log(min_dist);
   ans += min_dist;
   selected[now] = true;
 
