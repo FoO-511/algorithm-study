@@ -4,8 +4,9 @@ const [nodeN_edgeN, ...arr] = require("fs")
   .replaceAll("\r", "")
   .split("\n");
 
-// O(n^2)시간 복잡도
 const [nodeN, edgeN] = nodeN_edgeN.split(" ").map((v) => Number(v));
+
+// O(n^2)시간 복잡도
 
 // 그래프 표현이 헷갈렸는데 이 문제에서 MST 그래프를 구현하지 않고 MST에 포함된 정점을 따지는 배열(selected)만 있음.
 // ad는 모든 간선을 저장하는데, i번째에 i정점에서 출발하는 간선들을 모은 리스트
