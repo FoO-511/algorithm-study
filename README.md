@@ -13,6 +13,8 @@
 
   - BFS
 
+    - [[백준 2933] 미네랄](./2933_mineral)
+
   - 최소 버텍스 커버(Minimum Vertex Cover)
     - [[백준 1867] 돌멩이 제거](./1867_rock_removal)
 
