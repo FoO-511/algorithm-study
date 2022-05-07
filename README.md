@@ -22,7 +22,7 @@
 
   - 우선순위 큐(Priority Queue)
 
-    - [[백준 1655] 가운데를 말해요 - JAVA](./1655_priority_queue)
+    - [[백준 1655] 가운데를 말해요 - JAVA](./1655_speak_center)
 
   - 트리(Tree)
     - [[백준 14725] 개미굴](./14725_ant_nest)
