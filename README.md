@@ -15,6 +15,7 @@
 
     - [[백준 2933] 미네랄](./2933_mineral)
     - [[백준 1260] DFS와 BFS](./1260_DFS_and_BFS)
+    - [[백준 2178] 미로 탐색](./2178_maze)
 
   - 최소 버텍스 커버(Minimum Vertex Cover)
     - [[백준 1867] 돌멩이 제거](./1867_rock_removal)
