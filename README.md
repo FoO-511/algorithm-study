@@ -25,6 +25,7 @@
   - 우선순위 큐(Priority Queue)
 
     - [[백준 1655] 가운데를 말해요 - JAVA](./1655_speak_center)
+    - [[백준 11279] 최대 힙](./11279_max_heap)
 
   - 트리(Tree)
 
