@@ -2,6 +2,9 @@
 
 [11053 가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)
 
+최장 증가 부분 수열
+(LIS : Longest Increasing Subsequence)
+
 정답의 초기값을 0으로 했다가 계속 99% 넘겨 오답처리됨.
 배열의 길이가 1일 때 가장 긴 증가하는 수열의 크기는 1.
 
