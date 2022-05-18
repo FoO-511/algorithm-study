@@ -14,8 +14,6 @@ const exp = require("fs")
   );
 
 let ans = exp.shift();
-let num = 0;
-let tmp = "";
 
 ans -= exp.length > 0 ? exp.reduce((a, b) => a + b) : 0;
 
