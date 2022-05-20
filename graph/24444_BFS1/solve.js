@@ -10,7 +10,7 @@ let [NMR, ...arr] = require("fs")
 let ans = [];
 const [n, m, r] = NMR.split(" ").map(Number);
 const edge_info = arr.map((v) => v.split(" ").map(Number));
-const edges = new Array(200000).fill(0).map((v) => []);
+const edges = new Array(n + 1).fill(0).map((v) => []);
 let count = 1;
 const visited = new Array(n + 1).fill(0);
 
