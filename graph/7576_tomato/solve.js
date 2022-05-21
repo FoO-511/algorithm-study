@@ -32,8 +32,6 @@ class Queue {
   }
 }
 
-const visited = new Array(n).fill(0).map((v) => new Array(m).fill(false));
-const will_grow = new Array(n).fill(0).map((v) => new Array(m).fill(false));
 const map = arr.map((v) => v.split(" ").map(Number));
 const q = new Queue();
 

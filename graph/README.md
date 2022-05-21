@@ -15,6 +15,7 @@
 - [[백준 2667] 단지 번호 붙이기](./2667_tagging_block)
 - [[백준 1012] 유기농 배추](./1012_organic_cabage)
 - [[백준 7576] 토마토](./7576_tomato)
+- [[백준 7569] 토마토](./7569_tomato_3D)
 
 ## 최소 버텍스 커버(Minimum Vertex Cover)
 
