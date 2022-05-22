@@ -16,6 +16,7 @@
 - [[백준 1012] 유기농 배추](./1012_organic_cabage)
 - [[백준 7576] 토마토](./7576_tomato)
 - [[백준 7569] 토마토](./7569_tomato_3D)
+- [[백준 1697] 숨바꼭질](./1697_hide_and_seek)
 
 ## 최소 버텍스 커버(Minimum Vertex Cover)
 
