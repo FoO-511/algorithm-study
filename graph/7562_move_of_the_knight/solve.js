@@ -40,7 +40,6 @@ function bfs(start, dest, I) {
   const q = new Queue();
   start.reverse();
   dest.reverse();
-  // console.log("start,dest", start, dest);
   q.push(start);
   map[start[0]][start[1]] = 1;
 
@@ -65,7 +64,6 @@ function bfs(start, dest, I) {
 function solution(test_cases) {
   let ans = [];
 
-  // for (let i = 0; i < 1; i++) {
   for (let i = 0; i < T[0]; i++) {
     map.map((v) => v.fill(0));
     const I = test_cases[i * 3][0];
