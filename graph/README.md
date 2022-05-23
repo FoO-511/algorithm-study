@@ -18,6 +18,7 @@
 - [[백준 7569] 토마토](./7569_tomato_3D)
 - [[백준 1697] 숨바꼭질](./1697_hide_and_seek)
 - [[백준 7562] 나이트의 이동](./7562_move_of_the_knight)
+- [[백준 16928] 뱀과 사다리 게임](./16928_snake_and_ladder)
 
 ## 최소 버텍스 커버(Minimum Vertex Cover)
 
