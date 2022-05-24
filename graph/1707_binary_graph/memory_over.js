@@ -43,26 +43,43 @@ class Queue {
   }
 }
 
-function bfs(start, edges, visited) {
+function find(x, parents) {
+  if (parents[x] == x) return x;
+  return (parents[x] = find(parents[x], parents));
+}
+
+function union(x, y, parents) {
+  x = find(x, parents);
+  y = find(y, parents);
+  if (x == y) return;
+  parents[y] = x;
+}
+
+// find(x) == find(y)일 때 x에서 y까지 거친 정점 수(시작과 끝점 포함) = 사이클의 정점 개수
+// bfs
+function count_cycle_vertex(start, end, edges) {
   const q = new Queue();
+  const visited = new Array(edges.length).fill(0);
   q.push(start);
   visited[start] = 1;
 
   while (q.length > 0) {
     const cur = q.pop();
 
-    // 번갈아 넣다가 그룹에 있는 값이 겹치게 되면 이분그래프가 아님
+    if (cur == end) return visited[cur];
+
     for (let i of edges[cur]) {
       if (!visited[i]) {
-        visited[i] = visited[cur] == 1 ? 2 : 1;
+        visited[i] = visited[cur] + 1;
         q.push(i);
-      } else if (visited[i] == visited[cur]) {
-        return false;
       }
     }
   }
+  return 0;
+}
 
-  return true;
+function init_parents(V) {
+  return new Array(V + 1).fill(0).map((v, i) => i);
 }
 
 function push_edge(edge, edges) {
@@ -70,25 +87,23 @@ function push_edge(edge, edges) {
   edges[edge[1]].push(edge[0]);
 }
 
-function init_edge(V, given_edges) {
-  const _edges = new Array(V + 1).fill(0).map((v) => []);
-  for (let edge of given_edges) push_edge(edge, _edges);
-  return _edges;
-}
-
 function run_testcase(V, E, given_edges) {
-  let ret = true;
-  const edges = init_edge(V, given_edges);
-  const visited = new Array(V + 1).fill(0);
-
-  for (let i = 1; i <= V; i++) {
-    if (visited[i]) continue;
-    // 방문하지 않은 정점 탐색.
-    ret = bfs(i, edges, visited);
-    if (ret == false) return ret;
+  const _parents = init_parents(V);
+  const _edges = new Array(V + 1).fill(0).map((v) => []);
+  // 사이클을 이루는 정점이 짝수개 이면 이분 그래프임.
+  for (let edge of given_edges) {
+    // 하나씩 넣으며 find(x) == find(y)인지 체크
+    // find(x) == find(y)이면 현재 edge를 넣으면 사이클 형성.
+    const [x, y] = edge;
+    if (find(x, _parents) == find(y, _parents)) {
+      const cycle_count = count_cycle_vertex(x, y, _edges);
+      if (cycle_count % 2 == 1) return false;
+    }
+    push_edge(edge, _edges);
+    union(x, y, _parents);
   }
 
-  return ret;
+  return true;
 }
 
 function solution(T, test_cases) {

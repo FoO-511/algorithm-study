@@ -20,6 +20,7 @@
 - [[백준 7562] 나이트의 이동](./7562_move_of_the_knight)
 - [[백준 16928] 뱀과 사다리 게임](./16928_snake_and_ladder)
 - [[백준 2206] 벽 부수고 이동하기](./2206_break_wall_and_move)
+- [[백준 1707] 이분 그래프](./1707_binary_graph)
 
 ## 최소 버텍스 커버(Minimum Vertex Cover)
 
