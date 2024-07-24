@@ -12,7 +12,7 @@ const [N, arr] = require("fs")
 const n = Number(N);
 let ans = new Array(n).fill(-1);
 const nums = arr.split(" ").map(Number);
-// const stack = [];
+const stack = [];
 
 for (let i = 0; i < n; i++) {
   while (stack.length > 0) {
